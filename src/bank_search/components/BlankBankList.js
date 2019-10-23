@@ -61,7 +61,7 @@ const BlankBankList = props => {
                                     listSize={banks.length}
                                     showSize={showSize}
                                     page={page}
-                                    handleSizeChange={() => {}}
+                                    handleSizeChange={props.handleShowSize}
                                     onNextClick={() => {setPage(page + 1)}}
                                     onPrevClick={() => {setPage(page - 1)}}
                                     onPageClick={page => setPage(page)}

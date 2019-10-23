@@ -12,6 +12,7 @@ const BlankBankIndex = props => {
     const { citiesList, selectedCity, isLoading, favouriteList, searchParam } = props.state;
     const { error } = props.state;
     const [page, setPage] = useState(1);
+    const [showSize, setSize] = useState(5);
 
     useBlankBankFetch(selectedCity);
 
@@ -30,6 +31,10 @@ const BlankBankIndex = props => {
             type: Action.TOGGLE_FAVOURITE,
             value: ifsc.toString()
         });
+    }
+
+    const handleShowSize = (size) => {
+        setSize(size);
     }
 
     const onSearch = () => {
@@ -66,8 +71,10 @@ const BlankBankIndex = props => {
                 !isLoading &&
                 <BlankBankList
                     bankList={bankList}
+                    showSize={showSize}
                     page={page}
                     setPage={p => setPage(p)}
+                    handleShowSize={handleShowSize}
                     favouriteList={favouriteList}
                     onFavourite={onFavourite}
                 />

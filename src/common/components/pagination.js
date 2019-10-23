@@ -63,6 +63,19 @@ const Pagination = (props) => {
         }
         if (props.listSize === 0) { return null; }
         return (
+            <React.Fragment>
+            <div className="d-inline-block">
+            <div className="dropdown">
+                <button type="button" className="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
+                    Choose Size
+                </button>
+                <div className="dropdown-menu">
+                    <a className="dropdown-item" href="#" onClick = {e => {props.handleSizeChange(5)}}>5</a>
+                    <a className="dropdown-item" href="#" onClick = {e => {props.handleSizeChange(10)}}>10</a>
+                    <a className="dropdown-item" href="#" onClick = {e => {props.handleSizeChange(20)}}>20</a>
+                </div>
+                </div>
+            </div>
             <nav aria-label="card-footer-pagination Page navigation example">
                 <ul className="pagination d-flex flex-wrap">
                     {
@@ -86,6 +99,7 @@ const Pagination = (props) => {
                     }
                 </ul>
             </nav>
+            </React.Fragment>
         )
     }
     return "";
