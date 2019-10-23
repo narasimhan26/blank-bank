@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/blank-bank/static/js/main.220dda34.chunk.js",
-    "main.js.map": "/blank-bank/static/js/main.220dda34.chunk.js.map",
+    "main.js": "/blank-bank/static/js/main.5ff1ecbc.chunk.js",
+    "main.js.map": "/blank-bank/static/js/main.5ff1ecbc.chunk.js.map",
     "runtime-main.js": "/blank-bank/static/js/runtime-main.edab9795.js",
     "runtime-main.js.map": "/blank-bank/static/js/runtime-main.edab9795.js.map",
-    "static/js/2.10043b9b.chunk.js": "/blank-bank/static/js/2.10043b9b.chunk.js",
-    "static/js/2.10043b9b.chunk.js.map": "/blank-bank/static/js/2.10043b9b.chunk.js.map",
+    "static/js/2.f9f03d73.chunk.js": "/blank-bank/static/js/2.f9f03d73.chunk.js",
+    "static/js/2.f9f03d73.chunk.js.map": "/blank-bank/static/js/2.f9f03d73.chunk.js.map",
     "index.html": "/blank-bank/index.html",
-    "precache-manifest.6601e15eef38371069f370a8803890e4.js": "/blank-bank/precache-manifest.6601e15eef38371069f370a8803890e4.js",
+    "precache-manifest.bd26b8aeb4135a8b36dc602d4309a9da.js": "/blank-bank/precache-manifest.bd26b8aeb4135a8b36dc602d4309a9da.js",
     "service-worker.js": "/blank-bank/service-worker.js"
   },
   "entrypoints": [
     "static/js/runtime-main.edab9795.js",
-    "static/js/2.10043b9b.chunk.js",
-    "static/js/main.220dda34.chunk.js"
+    "static/js/2.f9f03d73.chunk.js",
+    "static/js/main.5ff1ecbc.chunk.js"
   ]
 }
