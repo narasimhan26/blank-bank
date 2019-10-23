@@ -67,7 +67,7 @@ const Pagination = (props) => {
             <div className="d-inline-block">
             <div className="dropdown">
                 <button type="button" className="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
-                    Choose Size
+                    {props.showSize}
                 </button>
                 <div className="dropdown-menu">
                     <a className="dropdown-item" href="#" onClick = {e => {props.handleSizeChange(5)}}>5</a>
