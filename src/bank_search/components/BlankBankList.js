@@ -19,7 +19,7 @@ const BlankBankList = props => {
     const { bankList } = props;
 
     let banks = bankList[tab];
-    let startIndex = showSize*(page - 1);
+    let startIndex = showSize * (page - 1);
     let pagedBanks = banks.slice(startIndex, startIndex + showSize)
 
     const favClassHelper = ifsc => {
@@ -47,25 +47,27 @@ const BlankBankList = props => {
                                 </button>
                             </li>
                             <li className="nav-item btn-sm">
-                                <button onClick={() => {setPage(1); setTab(1)}} className={`nav-link ${tab === 1 ? 'active' : ''}`}>
+                                <button onClick={() => { setPage(1); setTab(1) }} className={`nav-link ${tab === 1 ? 'active' : ''}`}>
                                     <i className="fa fa-heart-o mr-2"></i>FAVOURITES
                                 </button>
                             </li>
                         </ul>
                     </div>
                     <div className="card-body">
-                        {banks.length > showSize && 
+                        {banks.length > showSize &&
                             <div className="d-flex flex-row justify-content-between">
                                 <h6 className="mt-3 m-none">Showing {showSize} of {banks.length}</h6>
-                                <Pagination 
-                                    listSize={banks.length}
-                                    showSize={showSize}
-                                    page={page}
-                                    handleSizeChange={props.handleShowSize}
-                                    onNextClick={() => {setPage(page + 1)}}
-                                    onPrevClick={() => {setPage(page - 1)}}
-                                    onPageClick={page => setPage(page)}
-                                />
+                                <div className="d-flex">
+                                    <Pagination
+                                        listSize={banks.length}
+                                        showSize={showSize}
+                                        page={page}
+                                        handleSizeChange={props.handleShowSize}
+                                        onNextClick={() => { setPage(page + 1) }}
+                                        onPrevClick={() => { setPage(page - 1) }}
+                                        onPageClick={page => setPage(page)}
+                                    />
+                                </div>
                             </div>
                         }
                         <div className="row mt-3">
@@ -76,10 +78,10 @@ const BlankBankList = props => {
                                             <div className="card-body">
                                                 <h5 className="card-title">{bank.bank_name}</h5>
                                                 <h6 className="card-subtitle mb-2 text-primary">{bank.ifsc}</h6>
-                                                <small className="">{bank.branch}</small><br/>
+                                                <small className="">{bank.branch}</small><br />
                                                 <small className="text-muted">{bank.state}</small>
                                                 <div className="d-block text-right">
-                                                    <button onClick={(e) => {e.stopPropagation(); props.onFavourite(bank.ifsc)}} className={`border-0 bg-transparent text-danger fa ${favClassHelper(bank.ifsc)}`}></button>
+                                                    <button onClick={(e) => { e.stopPropagation(); props.onFavourite(bank.ifsc) }} className={`border-0 bg-transparent text-danger fa ${favClassHelper(bank.ifsc)}`}></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,10 +94,10 @@ const BlankBankList = props => {
             </div>
         </div>
 
-        <Modal 
-            visible={showModal} 
-            title={selectedBank.ifsc} 
-            children={<BlankBankShow bank={selectedBank} />} 
+        <Modal
+            visible={showModal}
+            title={selectedBank.ifsc}
+            children={<BlankBankShow bank={selectedBank} />}
             onClose={() => setShowModal(false)}
             footer={
                 <div className="w-100 d-flex justify-content-between">

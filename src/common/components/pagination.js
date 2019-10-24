@@ -64,41 +64,41 @@ const Pagination = (props) => {
         if (props.listSize === 0) { return null; }
         return (
             <React.Fragment>
-            <div className="d-inline-block">
-            <div className="dropdown">
-                <button type="button" className="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown">
-                    {props.showSize}
-                </button>
-                <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#" onClick = {e => {props.handleSizeChange(5)}}>5</a>
-                    <a className="dropdown-item" href="#" onClick = {e => {props.handleSizeChange(10)}}>10</a>
-                    <a className="dropdown-item" href="#" onClick = {e => {props.handleSizeChange(20)}}>20</a>
+                <div className="d-inline-block mr-2">
+                    <div className="dropdown">
+                        <button type="button" className="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+                            {props.showSize}
+                        </button>
+                        <div className="dropdown-menu">
+                            <a className="dropdown-item" href="#" onClick={e => { props.handleSizeChange(5) }}>5</a>
+                            <a className="dropdown-item" href="#" onClick={e => { props.handleSizeChange(10) }}>10</a>
+                            <a className="dropdown-item" href="#" onClick={e => { props.handleSizeChange(20) }}>20</a>
+                        </div>
+                    </div>
                 </div>
-                </div>
-            </div>
-            <nav aria-label="card-footer-pagination Page navigation example">
-                <ul className="pagination d-flex flex-wrap">
-                    {
-                        pageValues.length > 0 &&
-                        <li className="page-item">
-                            <button className="page-link" onClick={props.onPrevClick} aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                                <span className="sr-only">Previous</span>
-                            </button>
-                        </li>
-                    }
-                    {pages}
-                    {
-                        pageValues.length > 0 &&
-                        <li className="page-item">
-                            <button className="page-link" onClick={props.onNextClick} aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                                <span className="sr-only">Next</span>
-                            </button>
-                        </li>
-                    }
-                </ul>
-            </nav>
+                <nav aria-label="card-footer-pagination Page navigation example">
+                    <ul className="pagination d-flex flex-wrap">
+                        {
+                            pageValues.length > 0 &&
+                            <li className="page-item">
+                                <button className="page-link" onClick={props.onPrevClick} aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span className="sr-only">Previous</span>
+                                </button>
+                            </li>
+                        }
+                        {pages}
+                        {
+                            pageValues.length > 0 &&
+                            <li className="page-item">
+                                <button className="page-link" onClick={props.onNextClick} aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span className="sr-only">Next</span>
+                                </button>
+                            </li>
+                        }
+                    </ul>
+                </nav>
             </React.Fragment>
         )
     }
