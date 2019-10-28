@@ -18,4 +18,4 @@ npm i or yarn # installs dependencies
 npm start or yarn start # spins a development server at localhost:3000
 ```
 
-Check out the [demo](https://www.narasimhan26.github.io/blank-bank) page
+Check out the [demo](https://narasimhan26.github.io/blank-bank/) page
